@@ -1,0 +1,25 @@
+<div  class="outer">
+
+    <div class="inner">
+    
+
+        <div class="login-content">
+            <p style="color: #000000;font-weight:400;text-align: center; font-size: larger; ">Login</p><br>
+            <p>
+            </p>
+        </div>
+        <div class="form-area">
+            <p style="font-size: 0.7rem;">Email</p>
+            
+            <input type="text"  id="inputEmail" name="email" [(ngModel)]="model.email" maxlength="40"   required pattern="\S+">
+            <p style="font-size: 0.7rem;">Password</p>
+           
+            <input type="password"  id="inputPwd" name="password" [(ngModel)]="model.password" maxlength="12"   required pattern="\S+">
+            
+            <p id="pwderr" style="color:red;font-size: 10px;">{{errorMessage}}</p>
+            <!-- <a [routerLink]="" (click)="customerLogin(model.cifid)"><i></i>LOG IN</a> -->
+            <button type="button" (click)="customerLogin(model.email,model.password)" >    Login  </button>
+            <!-- <button type="button" (click)="customerLogin(model.cifid)" [disabled]="isEnabled"> <i><img *ngIf="isEnabled" src="/assets/images/oie_trans.gif" style="width: 50px;position: fixed; "> </i>    Login  </button> -->
+
+     
+</div>
